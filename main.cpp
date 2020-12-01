@@ -65,7 +65,7 @@ void runAnimation() {
             }
         }
     }
-    cout << "People Killed:           " << deadCounter << endl;
+    // cout << "People Killed:           " << deadCounter << endl;
     cout << "People with immunity:    " << immuneCounter << endl;
     cout << "People without immunity: " << untouchedCounter << endl;
 }
@@ -84,6 +84,7 @@ int main() {
     cout << "Enter the size of each group: " << endl;
     cin >> groupSize;
 
+
     // TODO - make the animation end when there are no more infected people
 
     // % chance someone will be infected at a given interaction
@@ -96,6 +97,9 @@ int main() {
     int globalInfectionDuration;
     cout << "Enter the infection duration: " << endl;
     cin >> globalInfectionDuration;
+
+
+    cout << "Untouched: 0" << endl << "Infected: 1" << endl << "Immune: 2" << endl;
 
 
     // fill population
@@ -111,7 +115,7 @@ int main() {
     }
 
     // create patient zero
-    population[5][3].infect();
+    population[0][0].infect();
 
 
     runAnimation();
